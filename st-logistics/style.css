@@ -1,0 +1,2454 @@
+/*
+Theme Name: ST Logistics
+Theme URI: https://striviothemes.com/product/st-logistics/
+Author: KristynaBennett
+Author URI: https://striviothemes.com/
+Description: STLogistic is a modern, lightweight, and fully responsive WordPress theme developed for logistics companies, transportation services, freight agencies, warehouse businesses, and supply chain providers. Built with clean code and optimized for performance, the theme ensures a smooth and reliable browsing experience across all devices. The theme includes customizable sections and blog support, making it easy to create a professional logistics website that effectively showcases your services. STLogistic is compatible with popular page builders and supports WooCommerce, making it a great choice for shipment services, transport bookings, and logistics management solutions. Whether you operate a logistics company, cargo service, or supply chain business, STLogistic offers a stylish, flexible, and professional foundation for building a strong online presence.
+Version: 1.3
+Requires at least: 4.7
+Requires PHP: 5.2
+Tested up to: 7.0
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: st-logistics
+Tags: blog, one-column, custom-background, custom-colors, full-width-template, custom-menu, custom-logo, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+/* Based on Normalize.css v8.0.0, HTML5 Boilerplate v6.1.0, & Bootstrap Reboot v4.1.0 | Under MIT License */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #333333;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: .5rem;
+	margin-bottom: 1rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	color: inherit;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: .9rem;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+	white-space: pre-wrap;
+}
+
+.footer-copyright a {
+	text-decoration: underline;
+}
+
+.st-logistics-single-wrap a {
+	text-decoration: underline;
+}
+a {
+	background-color: transparent;
+	color: #C8F53D;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #051128;
+}
+
+a:not([href]):not([tabindex]) {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline dotted;
+
+}
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+img {
+	border-style: none;
+	height: auto;
+	max-width: 100%;
+}
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+}
+
+figcaption {
+	font-size: 16px;
+	color: #333333;
+	line-height: 1.4;
+	font-style: italic;
+	font-weight: 400;
+}
+
+template {
+	display: none;
+}
+
+[hidden] {
+	display: none;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.st-logistics-single-wrap a,.page-single a,.comment-content a,.woocommerce-product-details__short-description a, #tab-description a,.extra-home-content a {
+	text-decoration: underline;
+	color:#C8F53D;
+}
+
+.st-logistics-single-wrap .form-submit input:hover{
+	text-decoration: underline;
+}
+
+.st-logistics-single-wrap .form-submit input:focus{
+	text-decoration: underline;
+}
+
+@media print {
+
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: "";
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+	}
+
+	pre,
+	blockquote {
+		page-break-inside: avoid;
+		border: 1px solid #cccccc;
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
+
+label {
+	display: inline-block;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0;
+
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+	width: 100%;
+	border: solid 1px #666666;
+	border-radius: 3px;
+	padding: 0.5rem 1rem;
+	transition: all .3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #333333;
+	outline: 1 solid;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	width: auto;
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+button,
+[type="submit"],
+[type="button"] {
+	display: inline-block;
+	font-weight: 400;
+	color: #161921;
+	text-align: center;
+	white-space: nowrap;
+	user-select: none;
+	background-color: transparent;
+	border: 1px solid #161921;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 3px;
+	transition: all .3s;
+}
+
+button:focus,
+[type="submit"]:focus,
+[type="button"]:focus {
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+button:hover,
+button:focus,
+[type="submit"]:hover,
+[type="submit"]:focus,
+[type="button"]:hover,
+[type="button"]:focus {
+	color: #ffffff;
+	background-color: #161921;
+	text-decoration: none;
+}
+
+button:not(:disabled),
+[type="submit"]:not(:disabled),
+[type="button"]:not(:disabled) {
+	cursor: pointer;
+}
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+
+}
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+
+}
+
+select {
+	display: block;
+}
+
+table {
+	background-color: transparent;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 0.9em;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table th,
+table td {
+	padding: 15px;
+	line-height: 1.5;
+	vertical-align: top;
+	border: 1px solid #cccccc;
+}
+
+table th {
+	font-weight: bold;
+}
+
+table thead th,
+table tfoot th {
+	font-size: 1em;
+}
+
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 1px solid #cccccc;
+}
+
+table tbody>tr:nth-child(odd)>td,
+table tbody>tr:nth-child(odd)>th {
+	background-color: #f7f7f7;
+}
+
+table tbody tr:hover>td,
+table tbody tr:hover>th {
+	background-color: #e9e9e9;
+}
+
+table tbody+tbody {
+	border-top: 2px solid #cccccc;
+}
+
+@media (max-width: 767px) {
+	table table {
+		font-size: 0.8em;
+	}
+
+	table table th,
+	table table td {
+		padding: 7px;
+		line-height: 1.3;
+	}
+
+	table table th {
+		font-weight: 400;
+	}
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* WordPress Default Class */
+.alignright {
+	float: right;
+	margin-left: 1rem;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 1rem;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignwide {
+	margin-left: -80px;
+	margin-right: -80px;
+}
+
+.alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+.alignfull img {
+	width: 100vw;
+}
+
+.wp-caption {
+	margin-bottom: 1.25rem;
+	max-width: 100%;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption-text {
+	margin: 0;
+}
+
+.gallery-caption {
+	display: block;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0.75rem;
+}
+
+.pagination {
+	margin: 20px auto;
+}
+
+.sticky {
+	position: relative;
+	display: block;
+}
+
+.bypostauthor {
+	font-size: inherit;
+}
+
+.hide {
+	display: none !important;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+	position: absolute !important;
+	white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	clip: auto !important;
+	display: block;
+	height: auto;
+	left: 5px;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+#skip-link-target[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Theme Styles Start */
+#page .st-home-page {
+	overflow: hidden;
+}
+#page-wrap .main-container {
+	max-width: 1044px;
+	margin: 0 auto;
+	margin-top: 30px !important;
+	overflow: hidden;
+}
+
+.single-post #page .main-container {
+	max-width: 1044px;
+	margin: 0 auto;
+	margin-top: 0px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.site-logo h1,
+.site-description {
+	margin: 0;
+}
+
+.st-logistics-post {
+	margin-bottom: 50px;
+}
+
+.st-logistics-post img {
+	max-width: 100%;
+}
+
+.st-logistics-post .post-title {
+	margin: 0;
+}
+
+.st-logistics-post .post-categories {
+	margin-bottom: 20px;
+}
+
+.st-logistics-post .post-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.st-logistics-post .read-more {
+	display: inline-block;
+	padding: 5px 15px;
+	border: 1px solid #161921;
+	text-transform: capitalize;
+}
+
+.st-logistics-post .post-tags a {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.commentslist {
+	list-style-type: none;
+	padding: 0;
+}
+
+.commentslist .children {
+	list-style-type: none;
+}
+
+.commentslist li {
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #e8e8e8;
+}
+
+.comment-author img {
+	margin-right: 10px;
+}
+
+.commentslist .reply {
+	display: inline-block;
+	padding: 5px 15px;
+	border: 1px solid #161921;
+}
+
+.comment-form-comment input,
+.comment-form-comment textarea {
+	border-color: #e8e8e8;
+}
+
+nav.navigation {
+	text-align: center;
+}
+
+nav.navigation a,
+nav.navigation span {
+	padding: 5px 10px;
+	border: 1px solid #e8e8e8;
+}
+
+.site-logo a,
+.st-logistics-post .read-more a,
+.st-logistics-post .post-title a {
+	text-decoration: none;
+}
+
+
+/* Menu Styles Start */
+
+.wp-block-button__link{
+	color: #fff !important;
+  background-color:#161921 ;
+  margin-bottom: 5px;
+}
+.wp-block-button.is-style-outline .wp-block-button__link{
+  border: 1px solid #161921;
+  color: #121212 !important;
+}
+.wp-block-button.is-style-squared .wp-block-button__link{
+  border-radius: 0px !important;
+}
+
+.post-title a, h1.post-title {
+	word-wrap: break-word;
+}
+
+/* Loader Styles */
+#st-logistics-loader-container {
+    position: fixed;
+    z-index: 999999;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #14287B;
+}
+
+#st-logistics-loader-img {
+    max-width: 180px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    animation: st-loader-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes st-loader-pulse {
+    0%   { transform: scale(1);    opacity: 1;    }
+    50%  { transform: scale(1.15); opacity: 0.6;  }
+    100% { transform: scale(1);    opacity: 1;    }
+}
+
+#st-logistics-custom-loader {
+	width: 60px;
+	aspect-ratio: 4;
+	--_g: no-repeat radial-gradient(circle closest-side,#ffffff 90%,#0000);
+	background: 
+	  var(--_g) 0%   50%,
+	  var(--_g) 50%  50%,
+	  var(--_g) 100% 50%;
+	background-size: calc(100%/3) 100%;
+	animation: l7 1s infinite linear;
+  }
+  @keyframes l7 {
+	  33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+	  50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+	  66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
+
+/* post card css start */
+/* Define the animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the card */
+
+.st-logistics-post-card {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.st-logistics-post-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer .btn {
+    margin-left: auto;
+}
+
+.st-read-more-btn{
+    color:#161921 !important;
+	background: #C8F53D;
+	border: none;
+	
+}
+
+.st-read-more-btn:hover{
+	background: #0A1A2F;
+	transform: scale(1.05);
+    -webkit-text-fill-color: #fff !important;
+	-webkit-background-clip: inherit !important;
+}
+
+.st-tags-btn{
+	border-color: #161921;
+	color: #161921;
+}
+.st-logistics-cat-badge{
+	color: #fff;
+	background: #0A1A2F;
+}
+/* post card css end */
+/* loader end */
+
+/* hero form start*/
+.hero-form input::placeholder {
+    color: #757575;
+}
+
+.hero-form-f2f {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-form .wpcf7-select{
+    background: #fff;
+    border: solid 1px #CCCCCC;
+    border-radius: 2px;
+}
+
+.hero-form input{
+    border: solid 1px #CCCCCC;
+    border-radius: 2px;
+}
+
+.hero-form label{
+    margin-top: 15px;
+}
+
+.hero-form label {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    text-align: left;
+}
+
+.hero-form textarea {
+    height: 120px
+}
+
+.hero-form [type="submit"]{
+    top: 16px;
+    left: 1262px;
+    padding: 9px 35.27px 9px 35.59px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+    background: #0A1A2F;
+    color: #fff;
+    
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.94px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+/* hero form end*/
+
+/* footer icon css */
+.stfooter-details .elementor-icon-box-icon {
+    align-self: center;
+}
+
+@media screen and (min-width : 320px) and (max-width : 767px) {
+
+	.hero-form [type="submit"] {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+	.hero-form-f2f {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+	.hero-form-f2f span {
+        width: 100%;
+    }
+    
+	.hero-form label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+	.hero-form input[type="text"] {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+	.hero-form input[type="email"] {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+	.hero-form input[type="tel"] {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+	.hero-form select {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+	
+	.hero-form label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+	.hero-form input[type="text"] {
+        padding: 7px;
+        font-size: 12px;
+    }
+    
+	.hero-form input[type="email"] {
+        padding: 7px;
+        font-size: 12px;
+    }
+    
+	.hero-form input[type="tel"] {
+        padding: 7px;
+        font-size: 12px;
+    }
+    
+	.hero-form select {
+        padding: 7px;
+        font-size: 12px;
+    }
+    
+	.hero-form label {
+        margin-top: 8px;
+    }
+}
+ /* Navigation Start */
+
+ul li a {
+	text-decoration: none;
+}
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+/* Menus Start */
+#masthead {
+    position: relative;
+    width: 100%;
+    z-index: 3000;
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 2px solid rgb(34 34 34 / 10%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.main-navigation {
+    display: block;
+    position: static;
+}
+.main-navigation ul ul {
+    background-color: #fff;
+    text-align: left;
+    padding: 0;
+}
+.main-navigation ul ul li a {
+    padding: 8px 15px;
+    color: #111;
+}
+.main-navigation ul ul a:after {
+    float: right;
+}
+.main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.main-navigation li {
+    position: relative;
+}
+
+.main-navigation ul.nav-menu > li > a {
+    padding: 15px 18px;
+}
+.main-navigation ul.nav-menu > li:hover > a,
+.main-navigation ul.nav-menu > li > a:hover,
+.main-navigation ul.nav-menu > li > a:focus {
+    color: #161921;
+	text-decoration: underline;
+}
+.main-navigation form.search-form input {
+    background-color: #111;
+    border-color: #111;
+    color: #111;
+    font-weight: 400;
+}
+.main-navigation a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.main-navigation ul ul {
+   float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+}
+.main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+}
+.main-navigation ul ul a {
+    width: 225px;
+}
+.main-navigation ul.nav-menu .current-menu-item > a {
+    color: #161921;
+}
+.main-navigation form.search-form {
+    min-width: 320px;
+}
+.menu-toggle {
+    border-radius: 0;
+    font-size: 14px;
+    margin: auto;
+    outline: none;
+    display: block;
+    height: 60px;
+    position: absolute;
+    background-color: transparent;
+    min-width: 64px;
+    border: none;
+    display: block;
+    float: right;
+    top: 20px;
+    right: 0;
+}
+.menu-toggle:hover, 
+.menu-toggle:focus {
+    outline: thin dotted #fff;
+    /* background-color: #ffaf29; */
+	background: #161921;
+    color: #fff;
+}
+.menu-toggle:hover i, 
+.menu-toggle:focus i {
+    color: #fff;
+}
+.menu-toggle i {
+    color: #666;
+}
+.menu-toggle span {
+    width: 35px;
+    height: 2px;
+    display: block;
+    background-color: #ffb5ad;
+    margin: 9px 0;
+}
+.menu-label {
+    float: right;
+    color: #111;
+    padding: 7px 0 0 10px;
+    display: none;
+}
+button.dropdown-toggle {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 55px;
+    line-height: 56px;
+    outline: none;
+    border-radius: 0;
+}
+button.dropdown-toggle:focus {
+	outline: thin dotted #000;
+}
+button.dropdown-toggle .fa {
+    color: #000;
+    font-size: 18px;
+    padding-left: 5px;
+}
+button.dropdown-toggle.active .fa:before {
+    content: "\f106";
+}
+
+.post-wrapper .featured-image {
+    margin-bottom: 0;
+}
+.post-wrapper .entry-footer {
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.post-wrapper .entry-content {
+    margin: 0;
+    color: #565859;
+}
+.cat-links a {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    position: relative;
+    text-transform: uppercase;
+    line-height: normal;
+    color: #313131;
+    margin-right: 10px;
+    -webkit-transition: color .3s ease,background-color .3s ease,border-color .3s ease;
+    -ms-transition: color .3s ease,background-color .3s ease,border-color .3s ease;
+    -o-transition: color .3s ease,background-color .3s ease,border-color .3s ease;
+    transition: color .3s ease,background-color .3s ease,border-color .3s ease;
+}
+.cat-links a:hover,
+.cat-links a:focus,
+.entry-meta a:hover,
+.entry-meta a:focus {
+    color: #161921;
+}
+span.cat-links a:not(:last-child):after {
+    content: "/";
+    margin: 0 5px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list {
+    list-style: disc;
+    padding-left: 1.5em;
+}
+#secondary .widget:not(:last-child) {
+    margin-bottom: 25px;
+}
+#secondary ul {
+    padding: 30px 50px;
+    margin: 0;
+    background-color: #e9ecef;
+}
+#secondary .widget_block.widget_search {
+    margin-bottom: 40px;
+}
+#secondary .widget_block input[type="search"] {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+.widget input {
+    height: 53px;
+    padding: 0 15px;
+    border: none;
+}
+#secondary .widget_block button[type="submit"] {
+    color: #666;
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+}
+#secondary .widget_block button[type="submit"]:hover,
+#secondary .widget_block button[type="submit"]:focus {
+    color: #fff;
+    background-color: #161921;
+    border-color: #161921;
+}
+#wp-custom-header {
+    text-align: center;
+}
+.dropdown-toggle::after{
+	display: none;
+}
+/* Sidebar Css Start */
+.widget-recent-posts li {
+	gap: 20px;
+}
+.widget-recent-posts, .widget-tags, .widget-categories {
+	box-shadow: 0px 0px 12px -1px rgb(0 0 0 / 12%);
+	border-radius: 10px;
+	padding: 15px;
+}
+@media screen and (min-width: 1025px) {
+	.main-navigation {
+	    display: block;
+	    position: relative;
+	    float: right;
+	    width: 58%;
+	}
+    .main-navigation .menu-item-has-children > a:after {
+        content: "\f107";
+        font-family: "FontAwesome";
+        padding-left: 8px;
+    }
+    .main-navigation ul ul .menu-item-has-children > a:after {
+        content: "\f105";
+    }
+    .main-navigation ul.nav-menu {
+        display: block !important;
+        height: auto !important;
+        text-align: right;
+    }
+    .main-navigation ul.nav-menu > li > a {
+	    color: #121418;
+	}
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+        left: 0;
+        right: auto;
+    }
+    .main-navigation ul ul li:hover > ul,
+    .main-navigation ul ul li.focus > ul {
+        left: 100%;
+        right: auto;
+    }
+    .main-navigation ul ul li:hover > a,
+    .main-navigation ul ul li.focus > a {
+        background-color: #161921;
+        color: #fff !important;
+		text-decoration: underline;
+    }
+    .main-navigation ul.sub-menu > li:last-child > a {
+        border-bottom: none;
+    }
+    .main-navigation ul ul li {
+        border-bottom: 1px solid #eee;
+    }
+    .main-navigation ul ul > li:last-child {
+        border-bottom: none;
+    }
+    .main-navigation ul ul ul {
+        top: 0;
+    }
+    .menu-toggle {
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: none;
+    }
+    .main-navigation .search-active .icon-search {
+        display: none;
+    }
+    .main-navigation .search-active .icon-close {
+        display: inline-block;
+    }
+    button.dropdown-toggle {
+        display: none;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .main-navigation ul {
+        display: block;
+    }
+    .main-navigation li {
+        display: inline-block;
+    }
+    .main-navigation form.search-form {
+        border: 20px solid #111;
+    }
+    .site-branding {
+	    float: left;
+	}
+	.main-navigation {
+	    position: relative;
+	}
+    #primary {
+	    width: 75%;
+	    float: left;
+	    padding-right: 30px;
+	    margin-bottom: 0;
+	}
+
+	#secondary {
+	    width: 25%;
+	    float: left;
+	    position: sticky;
+	    top: 30px;
+	}
+
+	.right-sidebar #primary {
+		float: left;
+	    padding-right: 40px;
+	}
+
+	.right-sidebar #secondary {
+		float: right;
+	}
+
+	.left-sidebar #primary {
+		float: right;
+	    padding-right: 0;
+	    padding-left: 40px;
+	}
+
+	.left-sidebar #secondary {
+		float: left;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.main-navigation ul.nav-menu {
+	    margin-right: 0;
+	    border-top: 1px solid #666;
+	    background-color: #f1f1f1;
+	    margin-top: 0;
+	    position: absolute;
+	    top: 100%;
+	    left: auto;
+	    right: 0;
+	    width: 100%;
+	}
+	.main-navigation ul.nav-menu li {
+	    border-bottom: 1px solid #666;
+	    display: block;
+	    width: 100%;
+	    padding: 0;
+	}
+	.main-navigation a {
+	    color: #161921;
+	}
+	.main-navigation ul ul, 
+	.main-navigation ul ul ul {
+	    box-shadow: none;
+	    float: none;
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    margin-bottom: 0;
+	    display: none;
+	    background-color: #f1f1f1;
+	}
+	.main-navigation ul ul {
+	    border-top: 1px solid #666;
+	}
+	.main-navigation ul.nav-menu li {
+	    border-bottom: 1px solid #666;
+	    display: block;
+	    width: 100%;
+	}
+	.main-navigation ul.sub-menu li a {
+	    border-left: none;
+	}
+	.main-navigation ul ul li a {
+	    padding-left: 35px;
+	    color: #161921;
+	}
+	.main-navigation ul ul a {
+	    width: 100%;
+	}
+}
+
+/* =============================================================================
+   ST Logistics – Footer Styles
+   ============================================================================= */
+
+/* ---- Footer outer wrapper ---- */
+.footer-side {
+	background-color: #121111;
+	color: #cccccc;
+	/* font-size: 0.9rem; */
+	line-height: 1.7;
+}
+
+/* Bottom spacing on theme templates so footer has gap.
+   Applied per-template (not on footer itself) so Elementor pages
+   using full-width layouts don't get extra gap above footer. */
+.main-container.page-single,
+.st-logistics-single-wrap,
+.st-logistics-index-wrap,
+.page-404 {
+	margin-bottom: 70px;
+}
+
+/* ---- Footer widget section ---- */
+.footer-widget {
+	padding: 60px 0 40px;
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.08 );
+}
+
+/* ---- Individual footer column ---- */
+.footer-area {
+	margin-bottom: 30px;
+}
+
+/* ---- Widget title ---- */
+.footer-area .widget-title,
+.footer-area .title {
+	color: #ffffff;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.footer-area .widget-title::after,
+.footer-area .title::after {
+	content: '';
+	display: block;
+	width: 40px;
+	height: 2px;
+	background-color: #0A1A2F;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* ---- Widget links ---- */
+.footer-area a {
+	color: #cccccc;
+	text-decoration: none;
+	transition: color 0.25s ease;
+}
+
+.footer-area a:hover,
+.footer-area a:focus {
+	color: #C8F53D;
+	text-decoration: underline;
+}
+
+/* ---- Widget list items ---- */
+.footer-area ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-area ul li {
+	padding: 4px 0;
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.06 );
+}
+
+.footer-area ul li:last-child {
+	border-bottom: none;
+}
+
+.footer-area ul li a::before {
+	content: '\203A';
+	margin-right: 6px;
+	color: #0A1A2F;
+}
+
+/* ---- Search widget inside footer ---- */
+.footer-side .footer-widget form div {
+	display: flex;
+	gap: 6px;
+}
+
+.footer-area #searchform input[type="text"] {
+	flex: 1;
+	padding: 8px 12px;
+	border: 1px solid rgba( 255, 255, 255, 0.15 );
+	background-color: rgba( 255, 255, 255, 0.07 );
+	color: #ffffff;
+	border-radius: 4px;
+	font-size: 0.875rem;
+}
+
+.footer-area #searchform .search-field::placeholder {
+	color: #aaaaaa;
+}
+
+.footer-area #searchform input[type="submit"] {
+	padding: 8px 16px;
+	background-color: #0A1A2F;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 0.875rem;
+	transition: background-color 0.25s ease;
+}
+
+.footer-area #searchform input[type="submit"]:hover,
+.footer-area #searchform input[type="submit"]:focus {
+	background-color: #ffffff;
+	color: #0A1A2F;
+}
+
+/* ---- Text / paragraph widgets ---- */
+.footer-area p {
+	color: #bbbbbb;
+	margin-bottom: 12px;
+}
+
+/* ---- Footer copyright bar ---- */
+.footer-copyright {
+	background-color: #0A1A2F;
+	padding: 14px 0;
+}
+
+.footer-copyright p {
+	color: #ffffff;
+	margin: 0;
+}
+
+.footer-copyright a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.25s ease;
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+/* ---- Sticky copyright ---- */
+.footer-copyright.sticky-copyright {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+}
+
+.footer-copyright.close-sticky {
+	position: relative;
+}
+
+/* ---- Footer social icons ---- */
+.footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+}
+
+.footer-links a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: rgba( 255, 255, 255, 0.08 );
+	color: #cccccc;
+	font-size: 0.95rem;
+	text-decoration: none;
+	transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+	background-color: #0A1A2F;
+	color: #ffffff;
+}
+
+/* ---- Progress bar ---- */
+.theme-progress-bar {
+	position: fixed;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background-color: #0A1A2F;
+	z-index: 9999;
+	transition: width 0.1s linear;
+}
+
+.theme-progress-bar.top {
+	top: 0;
+}
+
+.theme-progress-bar.bottom {
+	bottom: 0;
+}
+
+/* ---- Custom cursor ---- */
+.cursor-point-outline {
+	width: 36px;
+	height: 36px;
+	border: 2px solid #0A1A2F;
+	border-radius: 50%;
+	position: fixed;
+	pointer-events: none;
+	z-index: 99999;
+	transform: translate( -50%, -50% );
+	transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cursor-point {
+	width: 8px;
+	height: 8px;
+	background-color: #0A1A2F;
+	border-radius: 50%;
+	position: fixed;
+	pointer-events: none;
+	z-index: 99999;
+	transform: translate( -50%, -50% );
+}
+
+/* ---- Responsive: footer columns stack on small screens ---- */
+@media ( max-width: 767px ) {
+	.footer-widget {
+		padding: 40px 0 20px;
+	}
+
+	.footer-area {
+		margin-bottom: 24px;
+	}
+
+	.footer-copyright .col-lg-6 {
+		text-align: center !important;
+	}
+
+	.footer-copyright .text-md-end {
+		text-align: center !important;
+		margin-top: 6px;
+	}
+}
+
+/* =============================================================================
+   ST Logistics – Containers Styles
+   ============================================================================= */
+@media (min-width: 1200px) {
+	#page-wrap .st-header-container,
+	.st-footer-container,
+	.container.st-logistics-index-wrap,
+	.container.st-logistics-single-wrap,
+	.container.page-single {
+		width: 1220px;
+		max-width: 1220px;
+	}
+}
+
+/* =============================================================================
+   ST Logistics – Enhanced Dark Header
+   ============================================================================= */
+
+/* Header base */
+#masthead {
+    background-color: #ffffff;
+    border-bottom: 3px solid #0A1A2F;
+    padding: 16px 0;
+}
+
+/* Site title */
+.site-logo .site-title,
+.site-logo h1.site-title {
+    font-size: 1.45rem;
+    margin: 0;
+}
+
+.site-logo .site-title a,
+.site-logo h1.site-title a {
+    color: #121111;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    transition: color 0.2s ease;
+}
+
+.site-logo .site-title a:hover {
+    color: #0A1A2F;
+    text-decoration: none;
+}
+
+/* Custom logo brightness on dark background */
+.site-logo .custom-logo-link img {
+    filter: brightness(0) invert(1);
+}
+
+/* Desktop nav links on dark background */
+#masthead #site-navigation a {
+    color: #121111;
+}
+
+#masthead #site-navigation ul.nav-menu > li > a {
+    color: #121111;
+    font-weight: 500;
+    padding: 12px 16px;
+}
+
+#masthead #site-navigation ul.nav-menu > li:hover > a,
+#masthead #site-navigation ul.nav-menu > li > a:hover,
+#masthead #site-navigation ul.nav-menu > li > a:focus {
+    color: #0A1A2F;
+    text-decoration: none;
+}
+
+#masthead #site-navigation ul.nav-menu .current-menu-item > a {
+    color: #0A1A2F;
+}
+
+/* Desktop dropdown sub-menus */
+#masthead #site-navigation ul ul {
+    background-color: #0a2260;
+    border-top: 2px solid #0A1A2F;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#masthead #site-navigation ul ul li a {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 10px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+#masthead #site-navigation ul ul li:hover > a,
+#masthead #site-navigation ul ul li.focus > a {
+    background-color: #0A1A2F;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Mobile menu toggle button */
+#masthead .menu-toggle {
+    background: #0A1A2F;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    color: #fff;
+    width: auto;
+    min-width: 44px;
+    height: 40px;
+    padding: 0 12px;
+    position: static;
+    transform: none;
+    top: auto;
+    right: auto;
+    float: none;
+    display: none;
+    line-height: 1;
+}
+
+#masthead .menu-toggle i {
+    color: #fff;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+}
+
+#masthead .menu-toggle:hover,
+#masthead .menu-toggle:focus {
+    background: #0A1A2F;
+    border-color: #0A1A2F;
+    color: #fff;
+    outline: 2px solid rgba(244, 103, 68, 0.4);
+    outline-offset: 2px;
+}
+
+/* =============================================================================
+   Mobile Menu Dropdown – Full-width, flexbox layout
+   ============================================================================= */
+@media screen and (max-width: 1024px) {
+
+    /* Show the toggle button */
+    #masthead .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Nav is static so ul positions against #masthead (position: relative) */
+    #masthead #site-navigation {
+        position: static;
+        float: none;
+        width: auto;
+    }
+
+    /* Full-width dropdown flush with bottom edge of header */
+    #masthead #site-navigation ul.nav-menu {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #14287B;
+        border-top: 3px solid #0A1A2F;
+        border-bottom: 3px solid #0A1A2F;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        z-index: 99998;
+    }
+
+    /*
+     * Menu items use flexbox so the link and the toggle button
+     * sit on the same row, and the sub-menu wraps below them.
+     * This removes the need for any hardcoded button height.
+     */
+    #masthead #site-navigation ul.nav-menu > li,
+    #masthead #site-navigation ul.sub-menu > li,
+    #masthead #site-navigation ul ul > li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    #masthead #site-navigation ul.nav-menu > li:last-child,
+    #masthead #site-navigation ul.sub-menu > li:last-child,
+    #masthead #site-navigation ul ul > li:last-child {
+        border-bottom: none;
+    }
+
+    /* Links fill remaining row width — no extra right-padding needed */
+    #masthead #site-navigation ul.nav-menu > li > a {
+        flex: 1;
+        min-width: 0;
+        display: block;
+        padding: 14px 20px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-left: 3px solid transparent;
+        text-decoration: none;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    #masthead #site-navigation ul.nav-menu > li > a:hover,
+    #masthead #site-navigation ul.nav-menu > li:hover > a,
+    #masthead #site-navigation ul.nav-menu > li > a:focus {
+        background: rgba(255, 255, 255, 0.06);
+        border-left-color: #0A1A2F;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    /* Current / active item */
+    #masthead #site-navigation ul.nav-menu > li.current-menu-item > a,
+    #masthead #site-navigation ul.nav-menu > li.current-menu-ancestor > a {
+        border-left-color: #0A1A2F;
+        color: #0A1A2F;
+    }
+
+    /*
+     * Sub-menu toggle button: a flex item in the same row as the link.
+     * Height always equals the link row height via align-items: stretch
+     * on the parent li — no hardcoded px value needed.
+     */
+    #masthead #site-navigation button.dropdown-toggle {
+        position: static;
+        height: auto;
+        line-height: normal;
+        flex-shrink: 0;
+        width: 50px;
+        background: rgba(255, 255, 255, 0.04);
+        border: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 0;
+        color: rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        cursor: pointer;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    #masthead #site-navigation button.dropdown-toggle:hover,
+    #masthead #site-navigation button.dropdown-toggle:focus {
+        background: #0A1A2F;
+        color: #fff;
+        outline: none;
+    }
+
+    #masthead #site-navigation button.dropdown-toggle .fa {
+        color: inherit;
+        font-size: 14px;
+        transition: transform 0.25s ease;
+        pointer-events: none;
+    }
+
+    #masthead #site-navigation button.dropdown-toggle.active .fa {
+        transform: rotate(180deg);
+    }
+
+    /*
+     * Sub-menus: flex-basis 100% wraps them onto their own row below
+     * the link + button. display: none is explicit so jQuery's slideToggle
+     * always starts from a known hidden state on first page load.
+     */
+    #masthead #site-navigation ul.sub-menu,
+    #masthead #site-navigation ul ul {
+        display: none;
+        flex-basis: 100%;
+        position: static;
+        float: none;
+        box-shadow: none;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-left: none;
+        border-radius: 0;
+    }
+
+    /* Sub-level link style */
+    #masthead #site-navigation ul.sub-menu > li > a,
+    #masthead #site-navigation ul ul > li > a {
+        flex: 1;
+        min-width: 0;
+        display: block;
+        padding: 12px 20px 12px 36px;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.875rem;
+        border-left: 3px solid transparent;
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    #masthead #site-navigation ul.sub-menu > li > a:hover,
+    #masthead #site-navigation ul ul > li > a:hover,
+    #masthead #site-navigation ul.sub-menu > li > a:focus,
+    #masthead #site-navigation ul ul > li > a:focus {
+        background: rgba(255, 255, 255, 0.05);
+        border-left-color: #0A1A2F;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+@media (max-width: 767px) {
+	 /* Full-width dropdown flush with bottom edge of header */
+    #masthead #site-navigation ul.nav-menu {
+		top: calc(100% + 0px);
+		width: 100vw;
+		left: 0;
+}
+/* Nav column flex layout */
+.st-nav-col {
+    position: static;
+    gap: 0;
+}
+} /* end @media (max-width: 767px) */
+
+/* --- Header Search --- */
+.st-header-search-wrap {
+    position: relative;
+    margin-left: 14px;
+    flex-shrink: 0;
+}
+
+#masthead .st-header-search-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0A1A2F;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.83rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+#masthead .st-header-search-toggle:hover,
+#masthead .st-header-search-toggle:focus {
+    background: #C8F53D;
+    color: #ffffff;
+    transform: scale(1.03);
+    outline: 2px solid rgba(244, 103, 68, 0.4);
+    outline-offset: 2px;
+}
+
+.st-search-label {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    .st-search-label {
+        display: inline;
+    }
+}
+
+/* Search dropdown box */
+.st-header-search-box {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.2);
+    min-width: 290px;
+    z-index: 99999;
+    border-top: 3px solid #0A1A2F;
+}
+
+.st-header-search-box::before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 6px solid #0A1A2F;
+}
+
+.st-header-search-box #searchform div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.st-header-search-box input[type="text"] {
+    flex: 1;
+    width: auto;
+    border: 1px solid #dde1ea;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    color: #333;
+    background: #f8f9fc;
+}
+
+.st-header-search-box input[type="text"]:focus {
+    border-color: #C8F53D;
+    background: #fff;
+    outline: none;
+}
+
+.st-header-search-box input[type="submit"] {
+    background: #0A1A2F;
+    border: none;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.st-header-search-box input[type="submit"]:hover {
+    background: #C8F53D;
+    color: #fff;
+}
+
+/* Mobile search box positioning */
+@media screen and (max-width: 767px) {
+    .st-header-search-box {
+        right: -10px;
+        min-width: 260px;
+    }
+
+    #masthead .st-header-search-toggle {
+        padding: 7px 10px;
+    }
+}
+
+/* =============================================================================
+   ST Logistics – Enhanced Blog Index & Visual Polish
+   ============================================================================= */
+
+/* --- Page background (color set via custom-background default in functions.php) --- */
+#skip-link-target {
+    min-height: 60vh;
+}
+
+.container.st-logistics-index-wrap {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+/* --- Blog section header --- */
+.st-blog-section-header {
+    margin-bottom: 35px;
+}
+
+.st-blog-section-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #161921;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.st-section-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.st-section-divider::before {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 3px;
+    background-color: #0A1A2F;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.st-section-divider::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background-color: #e2e6ed;
+}
+
+/* --- Post Cards: shadow, radius, hover lift --- */
+/* Scoped to .col-md-6 parent to beat Bootstrap's .card border without !important */
+.col-md-6 .st-logistics-post-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.col-md-6 .st-logistics-post-card.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.13);
+}
+
+/* Featured image – consistent height */
+.st-logistics-post-card .card-img-top {
+    height: 188px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Image placeholder when no thumbnail */
+.st-post-img-placeholder {
+    height: 188px;
+    background: linear-gradient(135deg, #eef2ff 0%, #dce8fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C8F53D;
+    font-size: 2.8rem;
+    opacity: 0.35;
+}
+
+/* Category label above the title */
+.st-card-category-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #0A1A2F;
+    margin-bottom: 5px;
+}
+
+/* Card body */
+.st-logistics-post-card .card-body {
+    padding: 1.1rem 1.15rem 0.65rem;
+}
+
+/* Card title */
+.st-logistics-post-card .card-title {
+    font-size: 0.975rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.45rem;
+}
+
+.st-logistics-post-card .card-title a {
+    color: #161921;
+    transition: color 0.2s ease;
+}
+
+.st-logistics-post-card .card-title a:hover {
+    color: #0A1A2F;
+    text-decoration: none;
+}
+
+/* Card excerpt */
+.st-logistics-post-card .card-text {
+    font-size: 0.845rem;
+    color: #666;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+/* Card footer — two-class chain beats Bootstrap's single .card-footer */
+.st-logistics-post-card .card-footer {
+    background-color: #fafbfc;
+    border-top: 1px solid #f0f0f0;
+    padding: 0.7rem 1.15rem;
+}
+
+.st-logistics-post-card .card-footer .text-muted {
+    font-size: 0.775rem;
+    color: #999;
+}
+
+/* Read More – pill shape; a + two classes beats Bootstrap's btn specificity */
+a.btn.st-read-more-btn {
+    border-radius: 20px;
+    font-size: 0.78rem;
+    padding: 4px 15px;
+    letter-spacing: 0.2px;
+}
+
+/* --- Sidebar widgets ---
+   .sidebar-area prefix adds class specificity to override theme defaults cleanly */
+.sidebar-area .widget-categories,
+.sidebar-area .widget-recent-posts,
+.sidebar-area .widget-tags {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sidebar-area .widget-categories .widget-title,
+.sidebar-area .widget-recent-posts .widget-title,
+.sidebar-area .widget-tags .widget-title {
+    font-size: 0.825rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #161921;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #0A1A2F;
+    position: relative;
+}
+
+/* Category list items
+   Three-class chain beats Bootstrap .list-group-item (one class) */
+.sidebar-area .widget-categories ul.list-group .list-group-item {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    background-color: #f8f9fc;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-area .widget-categories ul.list-group .list-group-item:hover {
+    background-color: #eef2ff;
+    transform: translateX(4px);
+}
+
+.sidebar-area .widget-categories ul.list-group .list-group-item a {
+    font-size: 0.875rem;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sidebar-area .widget-categories ul.list-group .list-group-item a:hover {
+    color: #C8F53D;
+}
+
+/* Recent posts */
+.sidebar-area .widget-recent-posts li.media {
+    padding: 9px 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sidebar-area .widget-recent-posts li.media:last-child {
+    border-bottom: none;
+}
+
+/* img: element + two-class chain beats any single-class rule */
+.sidebar-area .widget-recent-posts .media img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.sidebar-area .widget-recent-posts .media-body h5 {
+    font-size: 0.825rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.sidebar-area .widget-recent-posts .media-body h5 a {
+    color: #333;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.sidebar-area .widget-recent-posts .media-body h5 a:hover {
+    color: #0A1A2F;
+}
+
+/* Tags — a + two classes beats Bootstrap .btn (one class) */
+.sidebar-area .widget-tags a.btn.st-tags-btn {
+    border-radius: 20px;
+    font-size: 0.75rem;
+    padding: 3px 12px;
+}
+
+/* Sidebar spacing */
+.sidebar-area {
+    padding-left: 20px;
+}
